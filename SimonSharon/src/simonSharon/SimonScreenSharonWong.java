@@ -64,7 +64,12 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 			if(b != null){
 				b.dim();
 			}
-			b = ((ButtonInterfaceSharonWong)sequence).getButton();
+			if (b==sequence.get(sequenceIndex).getButton()){
+				sequenceIndex++;
+			}
+			else{
+				ProgressInterfaceSharonWong.getOver();
+			}
 			b.highlight();
 			try {
 				Thread.sleep((long) (1000*(5.0)/roundNum));
