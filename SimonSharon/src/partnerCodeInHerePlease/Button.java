@@ -8,13 +8,13 @@ import gui.Components.Action;
 import gui.Components.Component;
 import gui.simon.ButtonInterfaceSharonWong;
 
-public class ButtonSharonWong extends Component implements ButtonInterfaceSharonWong {
+public class Button extends Component implements ButtonInterfaceSharonWong {
 
 	private Action action;
 	private Color color;
 	private boolean isOn;
 
-	public ButtonSharonWong(int x, int y) {
+	public Button(int x, int y) {
 		super(x,y,50,50);
 		
 	}
