@@ -21,8 +21,8 @@ public class Button extends Component implements ButtonInterfaceSharonWong {
 
 	@Override
 	public boolean isHovered(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		double distance = Math.sqrt(Math.pow(x-(getX()+50/2), 2)+Math.pow(y-(getY()+50/2), 2));
+		return  distance < 50/2;
 	}
 
 	@Override
@@ -33,19 +33,9 @@ public class Button extends Component implements ButtonInterfaceSharonWong {
 	@Override
 	public void setColor(Color color) {
 		this.color=color;
+		update();
 	}
 
-	@Override
-	public void setX(int i) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void setY(int i) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void setAction(Action a) {
@@ -70,13 +60,25 @@ public class Button extends Component implements ButtonInterfaceSharonWong {
 		g = clear();
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		if(isOn)
-			g.setColor(this.color);
+			g.setColor(color);
 		else
 			g.setColor(Color.gray);
-		//g.fillOval
-		//g.setColor
-		//g.drawOval
+			g.fillOval(0, 0, 50, 50);
+			g.setColor(Color.BLACK);
+			g.drawOval(0, 0, 49, 49);
 		
 	}
+	@Override
+	public void setX(int i) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setY(int i) {
+		// TODO Auto-generated method stub
+
+	}
+
 
 }

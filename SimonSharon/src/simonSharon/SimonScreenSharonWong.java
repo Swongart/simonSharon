@@ -98,7 +98,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	}
 
 	private MoveInterfaceSharonWong randomMove() {
-		ButtonInterfaceSharonWong b;
+		ButtonInterfaceSharonWong b = null;
 		//code that randomly selects a ButtonInterfaceX
 		int rand = (int)(Math.random()*button.length);
 		//if its equal then select rand again
