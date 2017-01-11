@@ -7,7 +7,7 @@ public class Move implements MoveInterfaceSharonWong {
 	private ButtonInterfaceSharonWong b;
 	public Move(ButtonInterfaceSharonWong b) {
 		this.b=b;
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
