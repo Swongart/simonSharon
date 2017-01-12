@@ -50,8 +50,8 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		acceptingInput = false;
 		roundNum++;
 		sequence.add(randomMove());
-		ProgressInterfaceSharonWong.setRound(roundNum);
-		ProgressInterfaceSharonWong.setSequenceSize(sequence.size());
+		progress.setRound(roundNum);
+		progress.setSequenceSize(sequence.size());
 		changeText("Simon's turn");
 		label.setText("");
 		playSequence();
@@ -155,7 +155,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 						if(b == sequence.get(sequenceIndex).getButton()){
 							sequenceIndex++;
 						}else{
-							ProgressInterfaceSharonWong.getOver();
+							progress.getOver();
 						}
 						if(sequenceIndex == sequence.size()){
 							Thread nextRound = new Thread(SimonScreenSharonWong.this);
