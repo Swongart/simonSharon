@@ -50,6 +50,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		ProgressInterfaceSharonWong.setRound(roundNum);
 		ProgressInterfaceSharonWong.setSequenceSize(sequence.size());
 		changeText("Simon's turn");
+		label.setText("");
 		playSequence();
 		changeText("Your turn");
 		acceptingInput = true;
@@ -125,8 +126,8 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		for(int i =0; i < numberOfButtons; i++){
 			final ButtonInterfaceSharonWong b = getAButton();
 			b.setColor(buttonColor[i]);
-			b.setX(150 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
-			b.setY(150 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
+			b.setX(160 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
+			b.setY(200 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
 			b.setAction(new Action(){
 				
 				public void act(){
