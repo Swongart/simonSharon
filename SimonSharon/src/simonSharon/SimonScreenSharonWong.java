@@ -181,14 +181,10 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	 */
 	
 	private ButtonInterfaceSharonWong getAButton() {
-		// TODO Auto-generated method stub
-		return null;
-		//return new Button(i,j);
+		return new Button();
 	}
 	private ProgressInterfaceSharonWong getProgress() {
-		// TODO Auto-generated method stub
-		return null;
-		//return new Progress;
+		return new Progress();
 	}	
 	
 }
