@@ -15,7 +15,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	//fields
 
 	private TextLabel label;
-	private ButtonInterfaceSharonWong[] button;
+	private ButtonInterfaceSharonWong[] buttons;
 	private ProgressInterfaceSharonWong progress;
 	private ArrayList<MoveInterfaceSharonWong> sequence;
 	
@@ -65,21 +65,32 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		
 		ButtonInterfaceSharonWong b = null;
 		for(int i =0; i<sequence.size();i++){
-			if(b != null){
-				b.dim();
-			}
-			if (b==sequence.get(sequenceIndex).getButton()){
-				sequenceIndex++;
-			}
-			else{
-				ProgressInterfaceSharonWong.getOver();
-			}
+			if(b!=null)b.dim();
+			
+			b = sequence.get(i).getButton();
 			b.highlight();
 			try {
-				Thread.sleep((long) (1000*(5.0)/roundNum));
+				Thread.sleep((long)(2000*(2.0/(roundNum+2))));
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			
+			
+//			if(b != null){
+//				b.dim();
+//			}
+//			if (b==sequence.get(sequenceIndex).getButton()){
+//				sequenceIndex++;
+//			}
+//			else{
+//				ProgressInterfaceSharonWong.getOver();
+//			}
+//			b.highlight();
+//			try {
+//				Thread.sleep((long) (1000*(5.0)/roundNum));
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
 		}
 		b.dim();
 		
@@ -102,21 +113,15 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	}
 
 	private MoveInterfaceSharonWong randomMove() {
-		ButtonInterfaceSharonWong b = null;
+		buttons = new ButtonInterfaceSharonWong[5];
 		//code that randomly selects a ButtonInterfaceX
-		int rand = (int)(Math.random()*button.length);
+		int rand = (int)(Math.random()*buttons.length);
 		//if its equal then select rand again
 		while(rand == last){
-			rand = (int) (Math.random()*button.length);
+			rand = (int) (Math.random()*buttons.length);
 		}
 		last = rand;
-		
-		return getMove(b);
-	}
-
-	private MoveInterfaceSharonWong getMove(ButtonInterfaceSharonWong b) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Move(buttons[rand]);
 	}
 
 	
