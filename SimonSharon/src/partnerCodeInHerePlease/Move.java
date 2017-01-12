@@ -6,16 +6,16 @@ import gui.simon.MoveInterfaceSharonWong;
 public class Move implements  simonSharon.MoveInterfaceSharonWong {
 
 	
-	private ButtonInterfaceSharonWong b;
+	private simonSharon.ButtonInterfaceSharonWong b;
 
 	
-	public Move(ButtonInterfaceSharonWong button) {
+	public Move(simonSharon.ButtonInterfaceSharonWong button) {
 		this.b=button;
 		
 	}
 
 	@Override
-	public ButtonInterfaceSharonWong getButton() {
+	public simonSharon.ButtonInterfaceSharonWong getButton() {
 		
 		return b;
 	}
