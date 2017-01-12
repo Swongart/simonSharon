@@ -19,13 +19,6 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	private ProgressInterfaceSharonWong progress;
 	private ArrayList<MoveInterfaceSharonWong> sequence;
 	
-	/*
-	 * int roundNumber
-		boolean acceptingInput
-		int sequenceIndex
-		int lastSelectedButton
-	
-	*/
 	private int roundNum;
 	private boolean acceptingInput;
 	private int sequenceIndex;
@@ -113,7 +106,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	}
 
 	private MoveInterfaceSharonWong randomMove() {
-		buttons = new ButtonInterfaceSharonWong[5];
+		//buttons = new ButtonInterfaceSharonWong[5];
 		//code that randomly selects a ButtonInterfaceX
 		int rand = (int)(Math.random()*buttons.length);
 		//if its equal then select rand again
@@ -130,6 +123,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		
 		int numberOfButtons = 5;
 		Color[] buttonColor = {Color.blue, Color.red,Color.pink,Color.orange,Color.yellow};
+		buttons = new ButtonInterfaceSharonWong[numberOfButtons];
 		//place all buttons
 		for(int i =0; i < numberOfButtons; i++){
 			final ButtonInterfaceSharonWong b = getAButton();
@@ -179,11 +173,7 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 			e.printStackTrace();
 		}
 	}
-	/*
-	 * 
-	 * Methods to be finished:
-	 * 
-	 */
+	
 	
 	private ButtonInterfaceSharonWong getAButton() {
 		return new Button();
