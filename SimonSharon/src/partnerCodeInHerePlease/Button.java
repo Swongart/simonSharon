@@ -13,6 +13,7 @@ public class Button extends Component implements  simonSharon.ButtonInterfaceSha
 	private Action action;
 	private Color color;
 	private boolean isOn;
+	private String name;
 	private static int x;
 	private static int y;
 
@@ -82,5 +83,9 @@ public class Button extends Component implements  simonSharon.ButtonInterfaceSha
 
 	}
 
+
+	public void setName(String s){
+		this.name = s;
+	}
 
 }

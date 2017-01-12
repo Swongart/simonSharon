@@ -123,13 +123,17 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 		
 		int numberOfButtons = 5;
 		Color[] buttonColor = {Color.blue, Color.red,Color.pink,Color.orange,Color.yellow};
+		String[] names = {"Blue", "red", "pink", "orange", "yellow"};
+
 		buttons = new ButtonInterfaceSharonWong[numberOfButtons];
 		//place all buttons
 		for(int i =0; i < numberOfButtons; i++){
-			final ButtonInterfaceSharonWong b = getAButton();
-			b.setColor(buttonColor[i]);
-			b.setX(160 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
-			b.setY(200 + (int)(100*Math.cos(i*2*Math.PI/(numberOfButtons))));
+			buttons[i] = getAButton();
+			buttons[i].setColor(buttonColor[i]);
+			buttons[i].setName(names[i]);
+			buttons[i].setX(200*i);
+			buttons[i].setY(300+i);
+			final ButtonInterfaceSharonWong b = buttons[i];
 			b.setAction(new Action(){
 				
 				public void act(){

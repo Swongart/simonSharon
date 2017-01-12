@@ -18,5 +18,7 @@ public interface ButtonInterfaceSharonWong extends Clickable {
 
 	void dim();
 
+	void setName(String string);
+
 	
 }
