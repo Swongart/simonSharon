@@ -1,13 +1,16 @@
 package simonSharon;
 
 import java.awt.Color;
+
 import java.util.ArrayList;
 
 import gui.Components.Action;
 import gui.Components.ClickableScreen;
 import gui.Components.TextLabel;
 import gui.Components.Visible;
-
+import partnerCodeInHerePlease.Progress;
+import partnerCodeInHerePlease.Button;
+import partnerCodeInHerePlease.Move;
 public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	//fields
 
@@ -161,6 +164,8 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	}
 
 	
+	
+
 	private void changeText(String string) {
 		try{
 			label.setText(string);
@@ -169,15 +174,23 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 			e.printStackTrace();
 		}
 	}
+	/*
+	 * 
+	 * Methods to be finished:
+	 * 
+	 */
 	
 	private ButtonInterfaceSharonWong getAButton() {
 		// TODO Auto-generated method stub
 		return null;
+		//return new Button(i,j);
 	}
 	private ProgressInterfaceSharonWong getProgress() {
 		// TODO Auto-generated method stub
 		return null;
+		//return new Progress;
 	}	
+	
 }
 
 
