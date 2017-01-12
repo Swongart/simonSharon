@@ -6,21 +6,41 @@ import java.awt.RenderingHints;
 import gui.Components.Component;
 import gui.simon.ProgressInterfaceSharonWong;
 
-public class Progress extends Component implements ProgressInterfaceSharonWong {
+public class Progress extends Component implements ProgressInterfaceSharonWong{
 	//fields
 	private boolean gameOver;
+	private String round;
+	private String sequence;
+	
+	public void setRound(int roundNumber) {
+		round = "Round " + roundNumber;
+		update();
+		
+	}
+	
+	public void getOver() {
+		gameOver = true;
+		update();
+		
+	}
+	
+	public void setSequenceSize(int size) {
+		sequence = "Sequence length "+size;
+		update();
+	}
+
+
 	
 	
-	public Progress(int x, int y, int w, int h) {
-		super(x, y, w, h);
-		// TODO Auto-generated constructor stub
+	public Progress() {
+		super(60, 60, 120, 50);
 		gameOver=false;
 	}
 
 	@Override
 	public void update(Graphics2D g) {
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		// TODO Auto-generated method stub
+		
 
 	}
 

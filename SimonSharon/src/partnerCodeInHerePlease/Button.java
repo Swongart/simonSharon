@@ -13,8 +13,10 @@ public class Button extends Component implements ButtonInterfaceSharonWong {
 	private Action action;
 	private Color color;
 	private boolean isOn;
+	private static int x;
+	private static int y;
 
-	public Button(int x, int y) {
+	public Button() {
 		super(x,y,50,50);
 		
 	}
@@ -70,13 +72,13 @@ public class Button extends Component implements ButtonInterfaceSharonWong {
 	}
 	@Override
 	public void setX(int i) {
-		// TODO Auto-generated method stub
+		x = i;
 
 	}
 
 	@Override
 	public void setY(int i) {
-		// TODO Auto-generated method stub
+		y = i;
 
 	}
 
