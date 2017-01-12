@@ -4,19 +4,10 @@ import gui.Components.Visible;
 
 public interface ProgressInterfaceSharonWong extends Visible {
 
-	static void getOver() {
-		// TODO Auto-generated method stub
-		
-	}
+	void getOver();
 
-	static void setRound(int roundNum) {
-		// TODO Auto-generated method stub
-		
-	}
+	void setRound(int roundNum);
 
-	static void setSequenceSize(int size) {
-		// TODO Auto-generated method stub
-		
-	}
+	void setSequenceSize(int size);
 
 }
