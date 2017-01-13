@@ -69,21 +69,6 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 			}
 			
 			
-//			if(b != null){
-//				b.dim();
-//			}
-//			if (b==sequence.get(sequenceIndex).getButton()){
-//				sequenceIndex++;
-//			}
-//			else{
-//				ProgressInterfaceSharonWong.getOver();
-//			}
-//			b.highlight();
-//			try {
-//				Thread.sleep((long) (1000*(5.0)/roundNum));
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
 		}
 		b.dim();
 		
@@ -122,8 +107,8 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	private void addButtons(ArrayList<Visible> viewObjects) {
 		
 		int numberOfButtons = 5;
-		Color[] buttonColor = {Color.blue, Color.red,Color.pink,Color.orange,Color.yellow};
-		String[] names = {"Blue", "red", "pink", "orange", "yellow"};
+		Color[] buttonColor = {Color.blue, Color.red,Color.green,Color.orange,Color.yellow};
+		String[] names = {"blue", "red", "green", "orange", "yellow"};
 
 		buttons = new ButtonInterfaceSharonWong[numberOfButtons];
 		//place all buttons
@@ -131,8 +116,8 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 			buttons[i] = getAButton();
 			buttons[i].setColor(buttonColor[i]);
 			buttons[i].setName(names[i]);
-			buttons[i].setX(200*i);
-			buttons[i].setY(300+i);
+			buttons[i].setX(150*i);
+			buttons[i].setY(250+i);
 			final ButtonInterfaceSharonWong b = buttons[i];
 			b.setAction(new Action(){
 				
@@ -167,8 +152,6 @@ public class SimonScreenSharonWong extends ClickableScreen implements Runnable {
 	}
 
 	
-	
-
 	private void changeText(String string) {
 		try{
 			label.setText(string);
